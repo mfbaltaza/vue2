@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue"></script>
+    <title>VueJS Tutorial</title>
+  </head>
+  <body>
+    <div id="vue-app" style="margin-left: 20%">
+      <h1>{{ greet('Afternoon') }}</h1>
+      <p>Name: {{ name }}</p>
+      <input type="text" v-model="name" @click="name = ''" /> <br />
+      <br />
+      <a v-bind:href="website" target="_blank" rel="noreferrer">Based Code</a>
+      <p>Job: {{ job }}</p>
+      <p>Age: {{ age }}</p>
+      <input type="number" v-model="age" @click.once="age = ''" />
+      <p>A: {{ a }}</p>
+      <p>B: {{ b }}</p>
+      <button class="button" @click="a++">Add to A</button>
+      <button class="button" @click="b++">Add to B</button>
+      <p>Age + A = {{ addToA }}</p>
+      <p>Age + B = {{ addToB }}</p>
+      <button class="button" @click="showAlert">Touch me</button>
+      <br />
+      <p :class="compClasses">Dynamic Text Color</p>
+      <div id="canvas" @mousemove="updateXY">{{x}}, {{y}}</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

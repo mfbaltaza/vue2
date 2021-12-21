@@ -1,0 +1,15 @@
+{
+  "name": "evue2",
+  "version": "1.0.0",
+  "description": "Mini repo to help people learn vue, by people I'm referring to myself",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Vue",
+    "JavaScript"
+  ],
+  "author": "mfbaltaza",
+  "license": "MIT"
+}
