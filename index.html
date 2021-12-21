@@ -33,6 +33,13 @@
       <button class="button" @click="showAlert">Touch me</button>
       <br />
       <p :class="compClasses">Dynamic Text Color</p>
+      <div>
+        <h2>Conditionals</h2>
+        <button @click="error = !error">Toggle Error</button>
+        <button @click="success = !success">Toggle Success</button>
+        <p v-if="error" style="color: red">Oh no</p>
+        <p v-else-if="success" style="color: green">You got it</p>
+      </div>
       <div id="canvas" @mousemove="updateXY">{{x}}, {{y}}</div>
     </div>
 
