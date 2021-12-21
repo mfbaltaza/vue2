@@ -33,10 +33,12 @@ new Vue({
   computed: {
     addToA() {
       console.log("Add to A");
+      if (!this.age) return 'Please type your age'
       return this.a + parseInt(this.age);
     },
     addToB() {
       console.log("Add to B");
+      if (!this.age) return 'Please type your age'
       return this.b + parseInt(this.age);
     },
     compClasses() {

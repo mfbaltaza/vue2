@@ -18,14 +18,14 @@
     <div id="vue-app" style="margin-left: 20%">
       <h1>{{ greet('Afternoon') }}</h1>
       <p>Name: {{ name }}</p>
-      <input type="text" v-model="name" @click="name = ''" /> <br />
+      <input type="text" v-model="name" @click="name = ''" />
       <br />
       <a v-bind:href="website" target="_blank" rel="noreferrer">Based Code</a>
       <p>Job: {{ job }}</p>
       <p>Age: {{ age }}</p>
       <input type="number" v-model="age" @click.once="age = ''" />
-      <p>A: {{ a }}</p>
-      <p>B: {{ b }}</p>
+      <p>A: {{ a ? a : 0 }}</p>
+      <p>B: {{ b ? b : 0}}</p>
       <button class="button" @click="a++">Add to A</button>
       <button class="button" @click="b++">Add to B</button>
       <p>Age + A = {{ addToA }}</p>
