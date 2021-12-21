@@ -40,6 +40,15 @@
         <p v-if="error" style="color: red">Oh no</p>
         <p v-else-if="success" style="color: green">You got it</p>
       </div>
+      <div>
+        <h2>Looping</h2>
+        <ul>
+          <li v-for="character in characters">{{  character }}</li>
+        </ul>
+        <ul>
+          <li v-for="ninja in ninjas">{{ninja.name}} {{ ninja.age }}</li>
+        </ul>
+      </div>
       <div id="canvas" @mousemove="updateXY">{{x}}, {{y}}</div>
     </div>
 
